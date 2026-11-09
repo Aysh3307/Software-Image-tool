@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-icon">✦</span>
+            Image <span>Flow</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+             <a href="#pdf-tool">Image to PDF</a>
+              <a href="#link-tool">Image to link</a>
+
+
+        </nav>
+        <a href="#tools" class="nav-btn">Explore Tools</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <span class="hero-badge">✦ YOUR SMART IMAGE WORKSPACE</span>
+
+            <h1>
+                Your Images <br>
+                <span>One Smooth Flow</span>
+            </h1>
+
+              <p>
+                Convert images into PDFs and create shareable image links.
+                Everything you need, in one simple workspace. </p>
+
+                <a href="#tools" class="primary-button">Explore Tools</a>
+
+            <div class="hero-features">
+                  <span>✓ Easy to use</span>
+                <span>✓ Fast processing</span>
+                <span>✓ Mobile friendly</span>
+
+            </div>
+
+        </section>
+
+        <section class="tools-sec" id="tools">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrows">Our Features</span>
+                    <h2>Explore Our Tools</h2>
+                    <p>Choose a tool to get started with your images</p>
+                </div>
+                <span class="tool-count">02 Tools</span>
+            </div>
+
+            <div class="tool-grid">
+                <article class="tool-card" id="pdf-tool">
+                    <div class="card-header">
+                 <div class="tool-icon pdf-icon">▤</div>
+                 <span class="tag">PDF CONVERTER</span>
+                    </div>
+
+                    <h3>Image To PDF</h3>
+                     <p class="description">
+                        Convert multiple images into one PDF document
+                        quickly and easily.
+                    </p>
+
+                    <label for="PdfImages" class="upload-area">
+
+                         <span class="upload-icon">↑</span>
+                         <strong>Upload your images</strong>
+                         <span>Click here to browse File</span>
+                          <small>JPG, PNG, WEBP · Multiple images</small>
+                    </label>
+
+                    <input type="file" id="PdfImages"  accept="image/jpeg,image/png,image/webp"
+                           multiple hidden>
+
+                           <div id="pdf-preview"   class="pdf-grid">
+
+                          <p class="empty-message">Your image previews will appear here.</p>
+                           </div>
+
+                           <button class="action-btn pdf-btn" id="convert-pdf" type="button">Convert to PDF</button>
+
+                           <p class="message" id="pdf-message" role="status"></p>
+
+                    </article>
+
+
+                           <article class="tool-card" id="link-tool"> 
+                            <div class="card-header">
+                                 <div class="tool-icon link-icon">↗</div>
+                                 <span class="tag">IMAGE SHARING</span>
+                            </div>
+
+                            <h3>Image to link</h3>
+                            <p class="description"> Preview your image, download it and generate
+                        a link for sharing. </p>
+
+                        <label class="upload-area" for="linkImage">
+                                <span class="upload-icon">↑</span>
+                                <strong>Upload your image</strong>
+                                <span>Click here to browse file</span>
+                                <small>JPG, PNG, WEBP · One image</small>
+                                </label>
+
+                            <input type="file"
+                            id="linkImage"
+                            accept="image/jpeg,image/png,image/webp" hidden>
+
+                            <div id="link-preview" class="link-preview">
+                                <p class="empty-message"> Your image preview will appear here.</p>
+
+                            </div>
+
+                            <button class="action-btn  link-btn" id="generate-link" type="button" >
+                                Generate Link
+                            </button>
+
+                            <div class="link-result">
+                                <label for="image-link">Generate Image Link</label>
+
+                                <input type="text" id="image-link" placeholder="Your image link will appear here" readonly>
+
+                            </div>
+
+                            <div class="button-group">
+
+                                <button class="secondary-btn" id="copy-link" type="button">
+                                    Copy Link
+                                </button>
+
+                                <button class="secondary-btn" id="download-image"  type="button">
+                                    Download Image
+                                </button>
+                            </div>
+
+                            <p class="message" id="link-message" role="status"></p>
+                </article>
+            </div>  
+        </section>
+
+        <section class="about-section" id="about">
+            <span class="eyebrows ">ABOUT IMGFLOW</span>
+
+             <h2>Simple Tools, Better Experience</h2>
+
+            <p>
+                ImgFlow is a simple and user-friendly image tools website
+                that helps users convert images into PDF documents and
+                generate image links easily.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#home" class="logo"><span class="logo-icon">✦</span> Image<span>Flow</span></a>
+
+         <p>Make your image tasks easier.</p>
+        <p>© 2026 ImgFlow. All Rights Reserved.</p>
+    </footer>
+ 
+    
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
